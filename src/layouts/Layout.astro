@@ -1,0 +1,185 @@
+---
+import Footer from '../components/Footer/Footer.astro';
+import Header from '../components/Header/Header.astro';
+
+interface Props {
+	title: string
+	description: string
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Italianno&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+        <div class="absolute inset-0 -z-10 h-full w-full bg-[#f7f7f7] dark:bg-black bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#f7f7f715_2px,transparent_1px),linear-gradient(to_bottom,#f7f7f715_2px,transparent_1px)] bg-[size:6rem_4rem]"><div class="circle absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_1000px_at_100%_600px,#ffcf0080,transparent)] dark:bg-[radial-gradient(circle_800px_at_100%_0px,#ffcf0050,transparent)]">
+          <Header></Header>
+          <slot />
+        </div></div>
+	</body>
+</html>
+
+<script is:inline>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+     document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+
+<style is:global>
+    @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+	html {
+		font-family: 'Onest', system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+		color-scheme: light dark;
+	}
+	.radient-animation {
+        display: inline;
+        font-style: normal;
+        background: linear-gradient(89.81deg, #ffae00 -1.72%, #fff567 54.05%, #ffae00 99.78%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        background-size: 200% 200%;
+        animation: gradient 4s ease infinite;
+	} 
+
+	@keyframes gradient {
+        0% {
+            background-position: 0% 100%;
+        }
+        
+        50% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background-position: 0% 100%;
+        }
+    }
+    @media (prefers-color-scheme: light) {
+        .radient-animation {
+            display: inline;
+            font-style: normal;
+            background: linear-gradient(89.81deg, #f8ec00 -1.72%, rgb(255, 183, 0) 54.05%, #f8ec00 99.78%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+            } 
+    }
+    .navBar {
+        background: rgba( 0, 0, 0, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.132);
+        backdrop-filter: blur( 7.5px );
+        -webkit-backdrop-filter: blur( 7.5px );
+        border-radius: 3rem;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .hamburgerNav {
+        background: rgba( 0, 0, 0, 0.15 );
+        backdrop-filter: blur( 15px );
+        -webkit-backdrop-filter: blur( 15px );
+    }
+
+    .hamburger {
+        padding: 15px 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition-property: opacity, filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible;
+    }
+  .hamburger:hover {
+    opacity: 0.7; 
+    }
+  .hamburger.is-active:hover {
+    opacity: 0.7; 
+    }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #f8ec00b4; 
+    }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; 
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; 
+}
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(89.81deg, #f8ec00 -1.72%, rgb(255, 183, 0) 54.05%, #f8ec00 99.78%);
+    border-radius: 4px; 
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; 
+    animation: gradient 4s ease infinite;
+}
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+ }
+  .hamburger-inner::before {
+    top: -10px;
+ }
+  .hamburger-inner::after {
+    bottom: -10px; }
+    .hamburger--vortex-r .hamburger-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex-r .hamburger-inner::before, .hamburger--vortex-r .hamburger-inner::after {
+    transition-duration: 0s;
+    transition-delay: 0.1s;
+    transition-timing-function: linear; }
+  .hamburger--vortex-r .hamburger-inner::before {
+    transition-property: top, opacity; }
+  .hamburger--vortex-r .hamburger-inner::after {
+    transition-property: bottom, transform; }
+
+.hamburger--vortex-r.is-active .hamburger-inner {
+  transform: rotate(-765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+  .hamburger--vortex-r.is-active .hamburger-inner::before, .hamburger--vortex-r.is-active .hamburger-inner::after {
+    transition-delay: 0s; }
+  .hamburger--vortex-r.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0; }
+  .hamburger--vortex-r.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg); }
+    
+</style>

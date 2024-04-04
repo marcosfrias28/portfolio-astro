@@ -1,0 +1,29 @@
+---
+interface Props {
+    title: string
+}
+const {title} = Astro.props;
+---
+
+<svg class="i inline"><text x="50%" y="50%" dy=".35em" text-anchor="middle">{title}</text></svg>
+
+<style>
+    text {
+      animation: stroke 7s backwards;
+      stroke: #fff567;
+      fill: transparent;
+      stroke-width: 2;
+    }
+    @keyframes stroke {
+      0%   {
+        stroke: #fff567;
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+      }
+      70%  {stroke: #fff567; }
+      80%  {stroke: #fff567; stroke-width: 3; }
+      100% {
+        stroke: #fff567; 
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+      }
+    }
+</style>

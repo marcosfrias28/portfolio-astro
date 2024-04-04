@@ -1,0 +1,67 @@
+---
+import NavBar from "./NavBar.astro"
+import ChangeThemeButton from "./ChangeThemeButton.astro"
+import MFLogo from "./MFLogo.astro"
+---
+
+
+<header class="hidden mx-auto md:flex flex-col gap-10 sm:gap sm:flex-row items-center w-full max-w-screen-lg sm:my-10 px-10 justify-between">
+    <MFLogo/>
+
+    <NavBar class="navBar flex items-center justify-between sm:gap-2 w-auto lg:w-1/2 px-9 h-auto min-h-12"/>
+    
+    <ChangeThemeButton id/>
+</header>
+
+<header class="md:hidden block bg-white/70 dark:bg-black/60 relative">
+    
+    <!-- HamburgerMenu -->
+    <div class="flex flex-row items-center justify-between p-10">
+
+        <ChangeThemeButton id=""/>
+        
+        <MFLogo />
+        
+          <button id="hamburgerButton" class="hamburger hamburger--vortex-r bg-black dark:bg-transparent" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>  
+        
+        <NavBar id="hamburgerNavBar" class="hamburgerNav hidden flex-col items-center absolute z-10 w-full h-auto top-30 gap-10 py-10"/>
+  
+      <!-- HamburgerMenu -->
+</header>
+
+<script is:inline>  
+    const hamburgerButton = document.querySelector('#hamburgerButton');
+    const hamburgerNavBar = document.querySelector('#hamburgerNavBar');
+    const themeButton = document.querySelectorAll('.themeButton')
+    console.log(themeButton)
+    
+    themeButton.map((button) => {
+      button.addEventListener('click', handleChangeTheme)
+    })
+    hamburgerButton.addEventListener('click', handleClick)
+    
+    function handleChangeTheme(){
+      console.log('ciao a tutti')
+    }
+  
+    function handleClick() {
+        hamburgerButton.classList.toggle('is-active');
+        hamburgerNavBar.classList.toggle('hidden')
+        hamburgerNavBar.classList.toggle('flex')
+        const navItems = document.querySelectorAll('.navItem')
+        console.log(navItems)
+
+        navItems.map(item => {
+        item.addEventListener('click', () => {
+            hamburgerButton.classList.toggle('is-active');
+            hamburgerNavBar.classList.toggle('hidden')
+        })
+    })
+    }
+    
+</script>
