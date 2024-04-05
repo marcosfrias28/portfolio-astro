@@ -1,190 +1,81 @@
 ---
-import Badge from "./Badge.astro"
-import Profile from "./Profile.astro"
-
-const curriculumData = {
-  "personal_info": {
-    "name": "Marcos Frias",
-    "email": "marcofrias0828@gmail.com",
-    "phone": "+39 (373) 761-3051",
-    "address": {
-      "street": "Via Alla Selva 3",
-      "city": "Seveso (MB)",
-      "country": {
-        "es": "Italia",
-        "en": "Italy",
-        "it": "Italia"
-      }
-    }, 
-  },
-  "education": [
-    {
-      "degree": {
-        "es": "Ingeniería Informática",
-        "en": "Computer Engineering",
-        "it": "Ingegneria Informatica"
-      },
-      "institution": {
-        "name": "University of XYZ",
-        "location": {
-          "es": "Ciudad de México",
-          "en": "Mexico City",
-          "it": "Città del Messico"
-        }
-      },
-      "year": "2010 - 2014"
-    },
-    {
-      "degree": {
-        "es": "Maestría en Ciencias de Datos",
-        "en": "Master of Science in Data Science",
-        "it": "Master in Scienze dei Dati"
-      },
-      "institution": {
-        "name": "ABC University",
-        "location": {
-          "es": "Madrid",
-          "en": "Madrid",
-          "it": "Madrid"
-        }
-      },
-      "year": "2015 - 2017"
-    }
-  ],
-  "work_experience": [
-    {
-      "title": {
-        "es": "Desarrollador de Software",
-        "en": "Software Developer",
-        "it": "Sviluppatore Software"
-      },
-      "company": "Tech Solutions",
-      "location": {
-        "es": "Ciudad de México",
-        "en": "Mexico City",
-        "it": "Città del Messico"
-      },
-      "year": "2014 - 2016",
-      "responsibilities": {
-        "es": [
-          "Desarrollo de aplicaciones web",
-          "Mantenimiento de sistemas existentes"
-        ],
-        "en": [
-          "Developing web applications",
-          "Maintaining existing systems"
-        ],
-        "it": [
-          "Sviluppo di applicazioni web",
-          "Manutenzione di sistemi esistenti"
-        ]
-      }
-    },
-    {
-      "title": {
-        "es": "Científico de Datos",
-        "en": "Data Scientist",
-        "it": "Scienziato dei Dati"
-      },
-      "company": "Data Insights",
-      "location": {
-        "es": "Madrid",
-        "en": "Madrid",
-        "it": "Madrid"
-      },
-      "year": "2017 - Present",
-      "responsibilities": {
-        "es": [
-          "Análisis de datos",
-          "Desarrollo de modelos predictivos"
-        ],
-        "en": [
-          "Data analysis",
-          "Developing predictive models"
-        ],
-        "it": [
-          "Analisi dei dati",
-          "Sviluppo di modelli predittivi"
-        ]
-      }
-    }
-  ],
-  "skills": {
-    "programming_languages": {
-      "es": ["Python", "Java", "JavaScript"],
-      "en": ["Python", "Java", "JavaScript"],
-      "it": ["Python", "Java", "JavaScript"]
-    },
-    "data_analysis_tools": {
-      "es": ["R", "SQL", "Pandas"],
-      "en": ["R", "SQL", "Pandas"],
-      "it": ["R", "SQL", "Pandas"]
-    },
-    "languages": {
-      "es": ["Inglés (Avanzado)", "Francés (Básico)"],
-      "en": ["English (Advanced)", "French (Basic)"],
-      "it": ["Inglese (Avanzato)", "Francese (Base)"]
-    }
-  },
-  "references": [
-    {
-      "name": "Dr. María López",
-      "position": {
-        "es": "Profesora de Ingeniería de Software",
-        "en": "Professor of Software Engineering",
-        "it": "Professoressa di Ingegneria del Software"
-      },
-      "institution": "University of XYZ",
-      "contact": "maria@example.com"
-    },
-    {
-      "name": "Mr. Giuseppe Bianchi",
-      "position": {
-        "es": "Jefe de Proyecto",
-        "en": "Project Manager",
-        "it": "Project Manager"
-      },
-      "company": "Data Insights",
-      "contact": "giuseppe@example.com"
-    }
-  ]
-}
-
+import Badge from "./Badge.astro";
+import Profile from "./Profile.astro";
+import SocialButton from "./SocialButton.astro";
+import linkedin from "../../public/svg/linkedin.svg";
+import gmail from "../../public/svg/gmail.svg";
 ---
 
-
-
-<section class="mx-auto max-w-[800px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-10">
+<section
+  class="mx-auto max-w-[800px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-40"
+>
   <div class="flex flex-row flex-nowrap justify-center items-center gap-7 mb-3">
-    <Profile avatarUrl="/images/avatar.webp" description="Marcos Frias photo profile" />
-    <Badge text="Disponibilità immediata"/>
+    <Profile
+      avatarUrl="/images/avatar.webp"
+      description="Marcos Frias photo profile"
+    />
+    <Badge text="Disponibilità immediata" />
   </div>
-  <span class="text-4xl sm:text-5xl my-6 sm:my-2 font-black text-balance">Ciao, sono <h1 class="radient-animation font-italianno text-[85px]">Marcos</h1></span>
-  <p class="text-2xl text-balance">Dopo 6 mesi di studi, esercitazioni e progetti con HTML, CSS, JavaScript, React, TailwindCSS e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi in presenza e più di 700 ore di materiale didattico, sono pronto a iniziare il mio percorso lavorativo come <span class="radient-">Sviluppatore Front-end.</span></p>
+  <span class="text-4xl sm:text-5xl my-6 sm:my-2 font-black text-balance"
+    >Ciao, sono <h1
+      class="radient-animation font-italianno text-[65px] sm:text-[85px]"
+    >
+      Marcos Frias
+    </h1></span
+  >
+  <p class="text-2xl text-pretty">
+    Dopo 6 mesi di studi, esercitazioni e progetti con <strong
+      class="font-bold dark:text-yellow-200"
+      >HTML, CSS, JavaScript, React, TailwindCSS</strong
+    > e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi in
+    presenza e più di 700 ore di materiale didattico, mi sento pronto per iniziare
+    il mio percorso lavorativo come <strong
+      class="font-bold dark:text-orange-300">Sviluppatore Front-end.</strong
+    >
+  </p>
+  <div class="flex gap-3 my-4">
+    <SocialButton
+      href="https://linkedin.com/in/MarcosFriasMolina"
+      svg={linkedin}
+      text="LinkedIn"
+    />
+    <SocialButton
+      href="mailto:marcofrias0828@gmail.com"
+      svg={gmail}
+      text="marcofrias0828@gmail.com"
+    />
+  </div>
 </section>
 
-
-
-<style >
+<style>
   svg {
-	font-family: 'Russo One', sans-serif;
-	position: absolute; 
-}
-svg text {
-	animation: stroke 7s backwards;
-  stroke: #fff567;
-	stroke-width: 2;
-}
-@keyframes stroke {
-	0%   {
-     stroke: #fff567;
-		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
-	}
-	70%  {stroke: #fff567; }
-	80%  {stroke: #fff567; stroke-width: 3; }
-	100% {
-		stroke: #fff567; 
-		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
-	}
-}
+    font-family: "Russo One", sans-serif;
+    position: absolute;
+  }
+  svg text {
+    animation: stroke 7s backwards;
+    stroke: #fff567;
+    stroke-width: 2;
+  }
+  @keyframes stroke {
+    0% {
+      stroke: #fff567;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+    }
+    70% {
+      stroke: #fff567;
+    }
+    80% {
+      stroke: #fff567;
+      stroke-width: 3;
+    }
+    100% {
+      stroke: #fff567;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+    }
+  }
 </style>
