@@ -6,58 +6,38 @@ import MFLogo from "./MFLogo.astro";
 
 <header
   {...Astro.props}
-  class="hidden mx-auto md:flex flex-col gap-10 sm:gap sm:flex-row items-center w-full max-w-screen-lg sm:my-10 px-10 justify-between"
+  class="mx-auto bg-black/50 md:bg-transparent fixed top-0 z-50 w-full h-auto px-5 py-5 md:py-0 md:px-10 lg:pl-40"
 >
-  <MFLogo />
-
-  <NavBar
-    class="navBar flex items-center justify-between sm:gap-2 w-auto lg:w-1/2 px-9 h-auto min-h-12"
-  />
-
-  <ChangeThemeButton />
-</header>
-
-<header
-  {...Astro.props}
-  class="md:hidden block bg-white/70 dark:bg-black/60 relative"
->
-  <!-- HamburgerMenu -->
-  <div class="flex flex-row items-center justify-between p-10">
+  <div
+    class="flex flex-row items-center justify-between max-w-[1000px] mx-auto"
+  >
     <ChangeThemeButton />
 
     <MFLogo />
+
     <button
       id="hamburgerButton"
-      class="hamburger hamburger--vortex-r bg-black dark:bg-transparent"
+      class="visible md:invisible order-4 hamburger hamburger--vortex-r bg-black dark:bg-transparent"
       type="button"
     >
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
-  </div>
 
-  <NavBar
-    id="hamburgerNavBar"
-    class="hamburgerNav hidden flex-col items-center absolute z-10 w-full h-auto top-30 gap-10 py-10"
-  />
+    <NavBar
+      id="hamburgerNavBar"
+      class="hidden bg-black md:bg-transparent md:rounded-none md:flex flex-col md:flex-row absolute md:static z-50 w-full h-auto top-24 left-0 gap-10 py-2 md:top-0 items-center justify-between md:gap-2 md:w-auto lg:w-1/2 px-9 min-h-12"
+    />
+  </div>
+  <!-- HamburgerMenu -->
 
   <!-- HamburgerMenu -->
 </header>
 
 <style>
-  .navBar {
-    background: rgba(0, 0, 0, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.132);
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-    border-radius: 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-  .hamburgerNav {
-    background: rgba(0, 0, 0, 0.15);
+  header {
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
   }
 </style>
 

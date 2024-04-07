@@ -1,15 +1,17 @@
 ---
-const text = Astro.props.text;
-const className = Astro.props.class;
-const href = Astro.props.href;
-const svg = Astro.props.svg;
+interface Props {
+  text: string;
+  href: string;
+  svg: ImageMetadata;
+}
+
+const { text, href, svg } = Astro.props;
 ---
 
 <a
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="hover:scale-105 transition cursor-pointer flex gap-3 border rounded-full px-3 py-1 justify-center items-center dark:bg-black/30 bg-yellow-100 shadow-lg"
-  class=`${className ? className : ''}`
+  class="hover:scale-105 w-fit h-auto text-white transition cursor-pointer flex gap-3 rounded-full px-3 py-1 justify-center items-center bg-black dark:bg-black/50"
   >{svg ? <img width="25px" src={svg?.src} alt="" /> : ""}{text}</a
 >

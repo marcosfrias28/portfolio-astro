@@ -1,0 +1,13 @@
+---
+interface Props {
+  text: string;
+  svg: ImageMetadata;
+}
+
+const { text, svg } = Astro.props;
+---
+
+<label
+  class="w-fit h-auto flex gap-3 rounded-full px-3 py-1 justify-center items-center dark:bg-black/50 bg-yellow-50 "
+  >{svg ? <img width="25px" src={svg?.src} alt="" /> : ""}{text}</label
+>

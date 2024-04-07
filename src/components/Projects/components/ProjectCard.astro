@@ -1,0 +1,41 @@
+---
+import type { ImageMetadata } from "astro";
+import Button from "../../SocialButton.astro";
+import github from "../../../../public/svg/github.svg";
+import vercel from "../../../../public/svg/vercel_dark.svg";
+import TechTag from "./TechTag.astro";
+
+const {
+  id,
+  className,
+  projectImgUrl,
+  tecnologies,
+  title,
+  description,
+  codeUrl,
+  previewUrl,
+} = Astro.props;
+---
+
+<article id={id} class={`${className} flex flex-col md:flex-row gap-10 my-20`}>
+  <div class="relative bg-black/20 md:w-1/2 rounded-3xl">
+    <img class="aspect-video rounded-3xl" src={projectImgUrl} alt="" />
+    <div
+      id="skillsLabels"
+      class="absolute top-3 left-3 flex flex-row flex-wrap gap-3 max-w-60"
+    >
+      {
+        tecnologies.map((item: { name: string; svg: ImageMetadata }) => (
+          <TechTag text={item.name} svg={item.svg} />
+        ))
+      }
+    </div>
+  </div>
+  <div class="flex flex-col gap-5 md:w-1/2">
+    <p class="text-2xl text-pretty my-8">{description}</p>
+    <div id="linkButtons" class="flex flex-row flex-nowrap gap-3">
+      <Button text="Codice sorgente" svg={github} href={codeUrl} />
+      <Button text="Live Demo" svg={vercel} href={previewUrl} />
+    </div>
+  </div>
+</article>

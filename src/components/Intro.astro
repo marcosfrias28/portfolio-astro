@@ -1,13 +1,15 @@
 ---
 import Badge from "./Badge.astro";
 import Profile from "./Profile.astro";
-import SocialButton from "./SocialButton.astro";
+import BadgeButton from "./SocialButton.astro";
 import linkedin from "../../public/svg/linkedin.svg";
 import gmail from "../../public/svg/gmail.svg";
+import github from "../../public/svg/github.svg";
+import download from "../../public/svg/download.svg";
 ---
 
 <section
-  class="mx-auto max-w-[800px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-40"
+  class="mx-auto max-w-[800px] flex flex-col flex-nowrap items-start p-5 mb-64 mt-40 md:mt-60"
 >
   <div class="flex flex-row flex-nowrap justify-center items-center gap-7 mb-3">
     <Profile
@@ -16,66 +18,43 @@ import gmail from "../../public/svg/gmail.svg";
     />
     <Badge text="Disponibilità immediata" />
   </div>
-  <span class="text-4xl sm:text-5xl my-6 sm:my-2 font-black text-balance"
+  <span class="text-4xl sm:text-5xl font-black text-balance"
     >Ciao, sono <h1
-      class="radient-animation font-italianno text-[65px] sm:text-[85px]"
+      class="font-italianno radient-animation text-[65px] sm:text-[85px]"
     >
       Marcos Frias
     </h1></span
   >
-  <p class="text-2xl text-pretty">
+  <p class="text-2xl text-pretty my-8">
     Dopo 6 mesi di studi, esercitazioni e progetti con <strong
       class="font-bold dark:text-yellow-200"
-      >HTML, CSS, JavaScript, React, TailwindCSS</strong
+      >HTML, CSS, JavaScript, ReactJS, TailwindCSS, Astro</strong
     > e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi in
     presenza e più di 700 ore di materiale didattico, mi sento pronto per iniziare
     il mio percorso lavorativo come <strong
       class="font-bold dark:text-orange-300">Sviluppatore Front-end.</strong
     >
   </p>
-  <div class="flex gap-3 my-4">
-    <SocialButton
+  <div class="flex flex-wrap gap-4">
+    <BadgeButton
       href="https://linkedin.com/in/MarcosFriasMolina"
       svg={linkedin}
       text="LinkedIn"
     />
-    <SocialButton
+    <BadgeButton
+      href="https://github.com/marcosfrias28"
+      svg={github}
+      text="GitHub"
+    />
+    <BadgeButton
       href="mailto:marcofrias0828@gmail.com"
       svg={gmail}
       text="marcofrias0828@gmail.com"
     />
+    <BadgeButton
+      href="https://github.com/marcosfrias28"
+      svg={download}
+      text="Download CV"
+    />
   </div>
 </section>
-
-<style>
-  svg {
-    font-family: "Russo One", sans-serif;
-    position: absolute;
-  }
-  svg text {
-    animation: stroke 7s backwards;
-    stroke: #fff567;
-    stroke-width: 2;
-  }
-  @keyframes stroke {
-    0% {
-      stroke: #fff567;
-      stroke-dashoffset: 25%;
-      stroke-dasharray: 0 50%;
-      stroke-width: 2;
-    }
-    70% {
-      stroke: #fff567;
-    }
-    80% {
-      stroke: #fff567;
-      stroke-width: 3;
-    }
-    100% {
-      stroke: #fff567;
-      stroke-dashoffset: -25%;
-      stroke-dasharray: 50% 0;
-      stroke-width: 0;
-    }
-  }
-</style>
