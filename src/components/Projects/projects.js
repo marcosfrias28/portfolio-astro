@@ -78,7 +78,7 @@ export const PROGETTI = [
     subtitle: "",
     tecnologies: [vite, react, tailwind, javascript],
     description:
-      "Richiesta per una futura immobiliaria. Utilizzo di useContext per creare uno stati globali. La lingua dell'intera pagina Web a scelta tra Spagnolo e Inglese facilmente modificabile dal oggetto che contiene tutti i testi. (Live Preview solo del 35% del progetto)",
+      "Richiesta per una futura immobiliaria. Utilizzo di useContext per creare stati globali. La lingua dell'intera pagina Web a scelta tra Spagnolo e Inglese facilmente modificabile dal oggetto che contiene tutti i testi. (Live Preview solo del 35% del progetto)",
     codeUrl: "",
     previewUrl: "https://brymar-immobiliaria.vercel.app/",
   },
