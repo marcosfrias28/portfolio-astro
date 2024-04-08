@@ -7,9 +7,6 @@ export default {
       italianno: "italianno",
       serif: "serif",
     },
-    animation: {
-      stroke: ["fill: "],
-    },
   },
   plugins: [],
 };
