@@ -2,12 +2,14 @@
 interface Props {
   text: string;
   svg: ImageMetadata;
+  color: string;
 }
 
-const { text, svg } = Astro.props;
+const { text, svg, color } = Astro.props;
 ---
 
 <label
-  class="w-auto sm:w-fit h-auto flex gap-3 rounded-full px-5 py-1 justify-center items-center bg-black dark:bg-black/50 text-white"
-  >{svg ? <img width="25px" src={svg?.src} alt="" /> : ""}{text}</label
+  style={`background-color: ${color}`}
+  class={`w-24 h-auto flex gap-3 rounded-full px-5 py-[2px] justify-center items-center text-white text-xs`}
+  >{svg ? <img width="15px" src={svg?.src} alt="" /> : ""}{text}</label
 >

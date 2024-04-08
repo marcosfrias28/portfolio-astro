@@ -1,7 +1,7 @@
 ---
 import MFLogo from "../Header/MFLogo.astro";
 import ProjectCard from "./components/ProjectCard.astro";
-import { progetti } from "./projects";
+import { PROGETTI } from "./projects";
 ---
 
 <section
@@ -26,13 +26,14 @@ import { progetti } from "./projects";
   </div>
 
   {
-    progetti.map(
+    PROGETTI.map(
       ({
         id,
         className,
         projectImgUrl,
         tecnologies,
         title,
+        subtitle,
         description,
         codeUrl,
         previewUrl,
@@ -44,6 +45,7 @@ import { progetti } from "./projects";
             className={className}
             projectImgUrl={projectImgUrl}
             title={title}
+            subtitle-={subtitle}
             description={description}
             codeUrl={codeUrl}
             previewUrl={previewUrl}

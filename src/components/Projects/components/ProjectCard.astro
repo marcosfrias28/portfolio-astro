@@ -11,6 +11,7 @@ const {
   projectImgUrl,
   tecnologies,
   title,
+  subtitle,
   description,
   codeUrl,
   previewUrl,
@@ -21,29 +22,36 @@ const {
   id={id}
   class={`${className} flex flex-col lg:flex-row justify-center items-center lg:justify-start lg:items-start gap-10 my-20 mx-auto`}
 >
-  <div class="relative bg-black/20 lg:w-1/2 rounded-3xl overflow-hidden">
-    <img class="aspect-video rounded-3xl" src={projectImgUrl} alt="" />
-    <h3
-      class="absolute radient-animation top-3 right-3 font-italianno text-5xl"
-    >
-      {title}
-    </h3>
-
+  <div
+    class="relative bg-black/20 lg:w-1/2 rounded-3xl overflow-hidden transition duration-500 hover:scale-105"
+  >
+    <img
+      class="object-cover object-top w-full h-full md:scale-110"
+      src={projectImgUrl}
+      alt=""
+    />
     <div
       id="skillsLabels"
-      class="absolute top-3 left-3 flex flex-row flex-wrap gap-3 w-24"
+      class="flex flex-row flex-wrap gap-3 absolute bottom-3 left-3"
     >
       {
-        tecnologies.map((item: { name: string; svg: ImageMetadata }) => (
-          <TechTag text={item.name} svg={item.svg} />
-        ))
+        tecnologies.map(
+          (item: { name: string; svg: ImageMetadata; color: string }) => (
+            <TechTag text={item.name} svg={item.svg} color={item?.color} />
+          )
+        )
       }
     </div>
   </div>
   <div
-    class="flex flex-col gap-5 lg:w-1/2 justify-center items-center lg:justify-start lg:items-start"
+    class="flex flex-col gap-5 lg:w-1/3 justify-center items-center lg:justify-start lg:items-start"
   >
-    <p class="text-xl sm:text-2xl text-balance my-8 w-full">{description}</p>
+    <h3 class="text-2xl">
+      <span class="radient-animation font-italianno text-5xl"> {title} </span> -
+      {subtitle}
+    </h3>
+
+    <p class="text-xl text-balance w-full opacity-70">{description}</p>
     <div id="linkButtons" class="flex flex-row flex-nowrap gap-3">
       {
         codeUrl ? (
