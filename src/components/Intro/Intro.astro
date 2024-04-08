@@ -1,15 +1,18 @@
 ---
-import Badge from "./Badge.astro";
-import Profile from "./Profile.astro";
-import BadgeButton from "./SocialButton.astro";
-import linkedin from "../../public/svg/linkedin.svg";
-import gmail from "../../public/svg/gmail.svg";
-import github from "../../public/svg/github.svg";
-import download from "../../public/svg/download.svg";
+import Badge from "../Badge.astro";
+import Profile from "../Intro/Profile.astro";
+import BadgeButton from "../SocialButton.astro";
+import linkedin from "../../../public/svg/linkedin.svg";
+import gmail from "../../../public/svg/gmail.svg";
+import github from "../../../public/svg/github.svg";
+import download from "../../../public/svg/download.svg";
+import SectionContainer from "../../layouts/SectionContainer.astro";
 ---
 
-<section
-  class="mx-auto max-w-[800px] flex flex-col flex-nowrap items-start p-5 mb-64 mt-40 md:mt-60"
+<SectionContainer
+  id="inizio"
+  className="mt-32 mb-48 sm:mt-28 sm:mb-24 w-auto max-w-[1000px]"
+  title=""
 >
   <div class="flex flex-row flex-nowrap justify-center items-center gap-7 mb-3">
     <Profile
@@ -25,7 +28,7 @@ import download from "../../public/svg/download.svg";
       Marcos Frias
     </h1></span
   >
-  <p class="text-2xl text-pretty my-8">
+  <p class="text-2xl my-8 w-auto text-wrap">
     Dopo 6 mesi di studi, esercitazioni e progetti con <strong
       class="font-bold dark:text-yellow-200"
       >HTML, CSS, JavaScript, ReactJS, TailwindCSS, Astro</strong
@@ -57,4 +60,4 @@ import download from "../../public/svg/download.svg";
       text="Download CV"
     />
   </div>
-</section>
+</SectionContainer>

@@ -1,0 +1,12 @@
+---
+import SectionTitle from "../components/SectionTitle.astro";
+const { id, title, className } = Astro.props;
+---
+
+<section
+  id={id}
+  class={`${className} mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-30 md:mt-48`}
+>
+  <SectionTitle title={title} />
+  <slot />
+</section>

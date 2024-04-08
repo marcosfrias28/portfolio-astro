@@ -1,60 +1,43 @@
 ---
-import MFLogo from "../Header/MFLogo.astro";
+import SectionContainer from "../../layouts/SectionContainer.astro";
 import ProjectCard from "./components/ProjectCard.astro";
 import { PROGETTI } from "./projects";
 ---
 
-<section
-  class="mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-72"
->
-  <div class="relative flex items-center justify-center w-full">
-    <h1
-      class="font-italianno radient-animation text-[85px] sm:text-[120px] mb-16 transition-opacity"
-    >
-      Progetti
-    </h1>
-    <svg class="-z-10 absolute opacity-20 show" viewBox="0 0 1920 1080">
-      <text
-        x="50%"
-        y="50%"
-        text-anchor="middle"
-        class="font-italianno text-[800px] sm:text-[500px] stroke-2 stroke-[rgba(254, 240, 138, 1)] dark:stroke-[rgba(254, 240, 138, 1)] animate-[stroke_5s_infinite]"
-      >
-        Progetti
-      </text>
-    </svg>
+<SectionContainer title="Progetti" id="progetti" className="">
+  <div class="flex flex-col flex-nowrap gap-20">
+    {
+      PROGETTI.map(
+        (
+          {
+            id,
+            projectImgUrl,
+            title,
+            tecnologies,
+            description,
+            codeUrl,
+            previewUrl,
+          },
+          i
+        ) => {
+          const order = i % 2 === 0 ? 1 : 0;
+          return (
+            <ProjectCard
+              id={id}
+              imgOrder={order}
+              tecnologies={tecnologies}
+              projectImgUrl={projectImgUrl}
+              title={title}
+              description={description}
+              codeUrl={codeUrl}
+              previewUrl={previewUrl}
+            />
+          );
+        }
+      )
+    }
   </div>
-
-  {
-    PROGETTI.map(
-      ({
-        id,
-        className,
-        projectImgUrl,
-        tecnologies,
-        title,
-        subtitle,
-        description,
-        codeUrl,
-        previewUrl,
-      }) => {
-        return (
-          <ProjectCard
-            id={id}
-            tecnologies={tecnologies}
-            className={className}
-            projectImgUrl={projectImgUrl}
-            title={title}
-            subtitle-={subtitle}
-            description={description}
-            codeUrl={codeUrl}
-            previewUrl={previewUrl}
-          />
-        );
-      }
-    )
-  }
-</section>
+</SectionContainer>
 
 <script is:inline>
   // Funzione per avviare l'animazione quando l'elemento è visibile

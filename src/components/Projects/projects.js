@@ -37,61 +37,42 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: "",
-    className: "",
     projectImgUrl: "/images/coffeeListing.webp",
     title: "Coffee Listing",
-    subtitle: "",
     tecnologies: [react, css, javascript],
     description:
-      "Realizza una chiamata Restful API e utilizza la risposta JSON con tutti i dati necessario per costruire il menu in questione. Uno dei primi progetti con ReactJS che mi ha fatto imparare sul 'Conditional Rendering' e l'utilizzo del useState e useEffect.",
+      "L'app utilizza una chiamata API Restful per ottenere un JSON con i dati necessari per creare il menu del caffè. È stato uno dei miei primi progetti con ReactJS, focalizzato sul Conditional Rendering e sull'uso di useState ed useEffect per gestire lo stato e gli effetti. Quest'esperienza è stata fondamentale nel mio apprendimento di React per creare interfacce reattive e dinamiche.",
     codeUrl: "https://github.com/marcosfrias28/simple-coffe-listing",
     previewUrl: "https://simple-coffe-listing-five.vercel.app/",
   },
   {
     id: "",
-    className: "",
     projectImgUrl: "/images/githubProfile.webp",
     title: "Github Profile",
-    subtitle: "",
     tecnologies: [html, css, javascript],
-    description: "Ricerca qualsiasi profilo",
+    description:
+      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
     codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
     previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
   },
   {
     id: "",
-    className: "",
     projectImgUrl: "/images/MeteoCountry.webp",
     title: "Meteo Country",
-    subtitle: "",
     tecnologies: [react, css, vite, javascript],
     description:
-      "Meteo Country consente agli utenti di cercare informazioni dettagliate su un paese specifico. Realizza una doppia chiamata API che lavorando insieme ti permette di vedere Capitale, Popolazione e la Bandiera del paese, oltre al Meteo attuale della sua capitale.",
+      "Meteo Country offre agli utenti la possibilità di ottenere informazioni dettagliate su un paese specifico. Utilizza una doppia chiamata API sincronizzata per visualizzare la capitale, la popolazione e la bandiera del paese, insieme alle condizioni meteorologiche attuali della sua capitale.",
     codeUrl: "https://github.com/marcosfrias28/Meteo-Country-Vite-React-CSS",
     previewUrl: "https://meteo-country-vite-react-css.vercel.app/",
   },
   {
     id: "",
-    className: "",
     projectImgUrl: "/images/brymarImmobiliaria.webp",
     title: "BryMar Immobiliaria",
-    subtitle: "",
     tecnologies: [vite, react, tailwind, javascript],
     description:
-      "Richiesta per una futura immobiliaria. Utilizzo di useContext per creare stati globali. La lingua dell'intera pagina Web a scelta tra Spagnolo e Inglese facilmente modificabile dal oggetto che contiene tutti i testi. (Live Preview solo del 35% del progetto)",
+      "Richiesta per un sito immobiliare all'avanguardia. Sfrutta useContext per gestire stati globali, consentendo una facile modifica della lingua tra Spagnolo e Inglese attraverso un oggetto contenente tutti i testi. La live preview offre una visione del 35% del progetto completo, evidenziando le sue funzionalità principali.",
     codeUrl: "",
     previewUrl: "https://brymar-immobiliaria.vercel.app/",
-  },
-  {
-    id: "",
-    className: "",
-    projectImgUrl: "/images/portfolio.webp",
-    title: "Portfolio",
-    subtitle: "",
-    tecnologies: [astro, tailwind, javascript, html, css],
-    description:
-      "Questo portfolio e' stato sviluppato utilizzando il framework Astro. Che mi e' particolarmente piaciuto, perche' conserva l'essenza di HTML, CSS e JavaScript, ma allo stesso tempo ti permette di aggiungere frameworks come TailwindCSS o React molto facilmente se dovessero servire.",
-    codeUrl: "https://github.com/marcosfrias28/portfolio-astro",
-    previewUrl: "https://portfolio-astro-eight-delta.vercel.app/",
   },
 ];
