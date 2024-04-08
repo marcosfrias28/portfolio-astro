@@ -8,6 +8,6 @@ const { text, svg } = Astro.props;
 ---
 
 <label
-  class="w-fit h-auto flex gap-3 rounded-full px-3 py-1 justify-center items-center dark:bg-black/50 bg-yellow-50 "
+  class="w-auto sm:w-fit h-auto flex gap-3 rounded-full px-3 py-1 justify-center items-center bg-black dark:bg-black/50 text-white"
   >{svg ? <img width="25px" src={svg?.src} alt="" /> : ""}{text}</label
 >
