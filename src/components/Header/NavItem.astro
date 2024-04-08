@@ -2,21 +2,21 @@
 const { href, content, class: classes, checked } = Astro.props;
 ---
 
-<a
-  href={href}
-  class={`navItem my-4 border-t-2 md:border-none border-yellow-300 ${classes}`}
->
-  <label class="transition cursor-pointer">
-    <input
-      checked={checked}
-      type="radio"
-      class="hidden peer"
-      name="navItem"
-      value={content}
-    />
+<label class="transition cursor-pointer">
+  <input
+    checked={checked}
+    type="radio"
+    class="hidden peer"
+    name="navItem"
+    value={content}
+  />
+  <a
+    href={href}
+    class={`navItem my-4 border-t-2 md:border-none border-yellow-300 ${classes}`}
+  >
     <span
       class="peer-checked:bg-yellow-200 text-nowrap peer-checked:text-black hover:bg-yellow-400/30 transition sm:rounded-full sm:px-5 sm:py-1"
       >{content}</span
     >
-  </label>
-</a>
+  </a>
+</label>

@@ -39,6 +39,7 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <div
+      id="header"
       class="absolute inset-0 -z-20 h-full w-full bg-[transparent] bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#f7f7f705_2px,transparent_1px),linear-gradient(to_bottom,#f7f7f705_2px,transparent_1px)] bg-[size:6rem_4rem] md:bg-[size:8rem_6rem]"
     >
       <div
@@ -60,6 +61,7 @@ const { title, description } = Astro.props;
     padding: 0;
     box-sizing: border-box;
     color-scheme: dark light;
+    scroll-behavior: smooth;
   }
   .radient-animation {
     display: inline;
