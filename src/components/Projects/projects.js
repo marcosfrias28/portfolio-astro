@@ -1,10 +1,14 @@
-import astroLogo from "../../../public/svg/astro.svg";
-import tailwindcssLogo from "../../../public/svg/tailwindcss.svg";
-import html5Logo from "../../../public/svg/html5.svg";
-import cssLogo from "../../../public/svg/css.svg";
-import viteLogo from "../../../public/svg/vite.svg";
-import jsLogo from "../../../public/svg/javascript.svg";
-import reactLogo from "../../../public/svg/react.svg";
+import astroLogo from "/src/assets/svg/astro.svg";
+import tailwindcssLogo from "/src/assets/svg/tailwindcss.svg";
+import html5Logo from "/src/assets/svg/html5.svg";
+import cssLogo from "/src/assets/svg/css.svg";
+import viteLogo from "/src/assets/svg/vite.svg";
+import jsLogo from "/src/assets/svg/javascript.svg";
+import reactLogo from "/src/assets/svg/react.svg";
+import coffeImage from "/src/assets/coffeeListing.webp";
+import gitHubImage from "/src/assets/githubProfile.webp";
+import meteoImage from "/src/assets/MeteoCountry.webp";
+import brymarImage from "/src/assets/brymarImmobiliaria.webp";
 
 export const TECNOLOGIES = {
   react: {
@@ -37,7 +41,7 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: "",
-    projectImgUrl: "/images/coffeeListing.webp",
+    projectImgUrl: coffeImage,
     title: "Coffee Listing",
     tecnologies: [react, css, javascript],
     description:
@@ -47,7 +51,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: "/images/githubProfile.webp",
+    projectImgUrl: gitHubImage,
     title: "Github Profile",
     tecnologies: [html, css, javascript],
     description:
@@ -57,7 +61,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: "/images/MeteoCountry.webp",
+    projectImgUrl: meteoImage,
     title: "Meteo Country",
     tecnologies: [react, css, vite, javascript],
     description:
@@ -67,7 +71,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: "/images/brymarImmobiliaria.webp",
+    projectImgUrl: brymarImage,
     title: "BryMar Immobiliaria",
     tecnologies: [vite, react, tailwind, javascript],
     description:

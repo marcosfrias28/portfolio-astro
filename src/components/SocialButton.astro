@@ -1,9 +1,5 @@
 ---
-interface Props {
-  text: string;
-  href: string;
-  svg: ImageMetadata;
-}
+import { Image } from "astro:assets";
 
 const { text, href, svg } = Astro.props;
 ---
@@ -13,5 +9,11 @@ const { text, href, svg } = Astro.props;
   target="_blank"
   rel="noopener noreferrer"
   class="hover:scale-105 w-fit h-auto text-white transition cursor-pointer flex gap-3 rounded-full px-3 py-1 justify-center items-center bg-black dark:bg-black/50 border-[0.3px] border-[#f7f7f7]"
-  >{svg ? <img width="25px" src={svg?.src} alt="" /> : ""}{text}</a
+  >{
+    svg ? (
+      <Image loading="lazy" width={25} src={svg} alt={text} {...Astro.props} />
+    ) : (
+      ""
+    )
+  }{text}</a
 >

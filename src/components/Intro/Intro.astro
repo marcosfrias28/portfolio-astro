@@ -1,12 +1,13 @@
 ---
 import Badge from "./components/Badge.astro";
-import Profile from "../Intro/Profile.astro";
+import avatar from "/src/assets/avatar.webp";
 import BadgeButton from "../SocialButton.astro";
-import linkedin from "../../../public/svg/linkedin.svg";
-import gmail from "../../../public/svg/gmail.svg";
-import github from "../../../public/svg/github.svg";
-import download from "../../../public/svg/download.svg";
+import linkedin from "/src/assets/svg/linkedin.svg";
+import gmail from "/src/assets/svg/gmail.svg";
+import github from "/src/assets/svg/github.svg";
+import download from "/src/assets/svg/download.svg";
 import SectionContainer from "../../layouts/SectionContainer.astro";
+import { Picture } from "astro:assets";
 ---
 
 <SectionContainer
@@ -15,49 +16,59 @@ import SectionContainer from "../../layouts/SectionContainer.astro";
   title=""
 >
   <div class="flex flex-row flex-nowrap justify-center items-center gap-7 mb-3">
-    <Profile
-      avatarUrl="/images/avatar.webp"
-      description="Marcos Frias photo profile"
+    <Picture
+      loading="eager"
+      class="rounded-full shadow-lg size-28 border-[2px] border-black dark:border-[lightyellow]"
+      src={avatar}
+      formats={["avif", "webp"]}
+      alt="Marcos Frias Molina Avatar"
     />
+
     <Badge text="Disponibilità immediata" />
   </div>
-  <span class="text-4xl sm:text-5xl font-black text-balance"
-    >Ciao, sono <h1
-      class="font-italianno radient-animation text-[65px] sm:text-[85px]"
+  <div>
+    <span class="text-4xl sm:text-5xl font-black text-balance"
+      >Ciao, sono <h1
+        class="font-italianno radient-animation text-[65px] sm:text-[85px]"
+      >
+        Marcos Frias
+      </h1></span
     >
-      Marcos Frias
-    </h1></span
-  >
-  <p class="text-2xl my-8 w-auto text-wrap">
-    Dopo 6 mesi di studi, esercitazioni e progetti con <strong
-      class="font-bold dark:text-yellow-200"
-      >HTML, CSS, JavaScript, ReactJS, TailwindCSS, Astro</strong
-    > e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi in
-    presenza e più di 700 ore di materiale didattico, mi sento pronto per iniziare
-    il mio percorso lavorativo come <strong
-      class="font-bold dark:text-orange-300">Sviluppatore Front-end.</strong
-    >
-  </p>
+    <p class="text-2xl my-8 w-auto text-wrap">
+      Dopo 6 mesi di studi, esercitazioni e progetti con <strong
+        class="font-bold dark:text-yellow-200"
+        >HTML, CSS, JavaScript, ReactJS, TailwindCSS, Astro</strong
+      > e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi
+      in presenza e più di 700 ore di materiale didattico, mi sento pronto per iniziare
+      il mio percorso lavorativo come <strong
+        class="font-bold dark:text-orange-300">Sviluppatore Front-end.</strong
+      >
+    </p>
+  </div>
   <div class="flex flex-wrap gap-4">
     <BadgeButton
       href="https://linkedin.com/in/MarcosFriasMolina"
       svg={linkedin}
       text="LinkedIn"
+      loading="eager"
     />
     <BadgeButton
       href="https://github.com/marcosfrias28"
       svg={github}
       text="GitHub"
+      loading="eager"
     />
     <BadgeButton
       href="mailto:marcofrias0828@gmail.com"
       svg={gmail}
       text="marcofrias0828@gmail.com"
+      loading="eager"
     />
     <BadgeButton
       href="https://drive.google.com/uc?export=download&id=1-jXjkBCuAHCsU2-p9jui1irLH713HjPW"
       svg={download}
       text="Download CV"
+      loading="eager"
     />
   </div>
 </SectionContainer>

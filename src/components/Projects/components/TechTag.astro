@@ -1,15 +1,18 @@
 ---
-interface Props {
-  text: string;
-  svg: ImageMetadata;
-  color: string;
-}
+import { Image } from "astro:assets";
 
 const { text, svg, color } = Astro.props;
 ---
 
-<label
+<div
   style={`background-color: ${color}`}
   class={`w-24 h-auto flex gap-3 rounded-full px-5 py-[2px] justify-center items-center text-white text-xs`}
-  >{svg ? <img width="15px" src={svg?.src} alt="" /> : ""}{text}</label
 >
+  {
+    svg ? (
+      <Image width={15} loading="eager" src={svg} alt={text} {...Astro.props} />
+    ) : (
+      ""
+    )
+  }{text}
+</div>

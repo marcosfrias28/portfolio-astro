@@ -1,9 +1,10 @@
 ---
 import type { ImageMetadata } from "astro";
 import Button from "../../SocialButton.astro";
-import github from "../../../../public/svg/github.svg";
-import vercel from "../../../../public/svg/vercel_dark.svg";
+import github from "/src/assets/svg/github.svg";
+import vercel from "/src/assets/svg/vercel_dark.svg";
 import TechTag from "./TechTag.astro";
+import { Picture, getImage } from "astro:assets";
 
 const {
   id,
@@ -11,11 +12,15 @@ const {
   projectImgUrl,
   tecnologies,
   title,
-  subtitle,
   description,
   codeUrl,
   previewUrl,
 } = Astro.props;
+
+const optimazeImage = await getImage({
+  src: projectImgUrl,
+  format: ["avif, webp"],
+});
 ---
 
 <article
@@ -23,9 +28,17 @@ const {
   class={`flex flex-col lg:flex-row gap-10 my-14 mx-auto transition duration-300 hover:scale-105`}
 >
   <div
-    class={`relative bg-black/20 rounded-3xl overflow-hidden order-${imgOrder} max-lg:order-none`}
+    class={`relative aspect-video bg-black/20 rounded-3xl overflow-hidden order-[${imgOrder}] max-lg:order-none`}
   >
-    <img class="h-full md:scale-110" src={projectImgUrl} alt="" />
+    <Picture
+      loading="eager"
+      width={1920}
+      height={1080}
+      class="h-full md:scale-110"
+      src={projectImgUrl}
+      formats={["avif", "webp"]}
+      alt="Marcos Frias Molina Avatar"
+    />
     <div
       id="skillsLabels"
       class="flex flex-row flex-wrap gap-3 absolute bottom-3 left-3"
