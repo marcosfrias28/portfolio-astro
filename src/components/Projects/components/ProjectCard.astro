@@ -4,7 +4,7 @@ import Button from "../../SocialButton.astro";
 import github from "/src/assets/github.svg";
 import vercel from "/src/assets/vercel_dark.svg";
 import TechTag from "./TechTag.astro";
-import { Picture, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 
 const {
   id,
@@ -16,11 +16,14 @@ const {
   codeUrl,
   previewUrl,
 } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp,svg}"
+);
 
-const optimazeImage = await getImage({
-  src: projectImgUrl,
-  format: ["avif, webp"],
-});
+if (!images[projectImgUrl])
+  throw new Error(
+    `"${projectImgUrl}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
+  );
 ---
 
 <article
@@ -30,14 +33,14 @@ const optimazeImage = await getImage({
   <div
     class={`relative aspect-video bg-black/20 rounded-3xl overflow-hidden order-[${imgOrder}] max-lg:order-none`}
   >
-    <Picture
+    <Image
       loading="eager"
-      width={1920}
-      height={1080}
+      width={projectImgUrl.width}
+      height={projectImgUrl.height}
+      format={projectImgUrl.format}
       class="h-full md:scale-110"
-      src={projectImgUrl}
-      formats={["avif", "webp"]}
-      alt="Marcos Frias Molina Avatar"
+      src={images[projectImgUrl]()}
+      alt={`${title} screenshot`}
     />
     <div
       id="skillsLabels"

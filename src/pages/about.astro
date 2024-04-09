@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import avatar from "/src/assets/avatar.webp";
+import SectionContainer from "../layouts/SectionContainer.astro";
+import { Picture } from "astro:assets";
+---
+
+<Layout
+  title="Marcos Frias - Sviluppatore Web Front-end"
+  description="Sviluppatore Web appassionato con il front-end"
+>
+  <SectionContainer title="Chi sono">
+    <section class="flex flex-row flex-wrap">
+      <Picture
+        loading="eager"
+        class="rounded-full shadow-lg size-96 border-[2px] border-black dark:border-[lightyellow]"
+        src={avatar}
+        alt="Marcos Frias Molina Avatar"
+      />
+      <p class="text-2xl text-wrap">
+        Dopo 6 mesi di studi, esercitazioni e progetti con <strong
+          class="font-bold dark:text-yellow-200"
+          >HTML, CSS, JavaScript, ReactJS, TailwindCSS, Astro</strong
+        > e altre tecnologie, insieme alla partecipazione di oltre 400 ore di corsi
+        in presenza e più di 700 ore di materiale didattico, mi sento pronto per
+        iniziare il mio percorso lavorativo come <strong
+          class="font-bold dark:text-orange-300">Sviluppatore Front-end.</strong
+        >
+      </p>
+    </section>
+  </SectionContainer>
+</Layout>

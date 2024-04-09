@@ -1,5 +1,4 @@
 ---
-import type { GetStaticPaths } from "astro";
 import Footer from "../components/Footer/Footer.astro";
 import Header from "../components/Header/Header.astro";
 
@@ -25,6 +24,10 @@ const { title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Italianno&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
     <script>
       if (
@@ -38,7 +41,7 @@ const { title, description } = Astro.props;
       }
     </script>
   </head>
-  <body class="bg-[#f7f7f7] dark:bg-zinc-900 text-zinc-900 dark:text-current">
+  <body class="bg-[#f7f7f7] dark:bg-zinc-900 text-zinc-900 dark:text-[#f7f7f7]">
     <div
       id="header"
       class="absolute inset-0 -z-20 h-full w-full bg-[transparent] bg-[linear-gradient(to_right,#00000020_1px,transparent_1px),linear-gradient(to_bottom,#00000020_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#f7f7f705_2px,transparent_1px),linear-gradient(to_bottom,#f7f7f705_2px,transparent_1px)] bg-[size:6rem_4rem] md:bg-[size:8rem_6rem]"
@@ -50,18 +53,16 @@ const { title, description } = Astro.props;
     </div>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
 <style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
-
   html {
     font-family: "Onest", system-ui, sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    color-scheme: light dark;
   }
   .radient-animation {
     display: inline;
@@ -99,7 +100,7 @@ const { title, description } = Astro.props;
       background: linear-gradient(
         89.81deg,
         #f8ec00 -1.72%,
-        rgb(255, 183, 0) 54.05%,
+        rgb(95, 68, 0) 54.05%,
         #f8ec00 99.78%
       );
       -webkit-background-clip: text;
@@ -213,10 +214,10 @@ const { title, description } = Astro.props;
     transform: rotate(-90deg);
   }
 
-  @keyframes stroke {
+  @keyframes strokeDark {
     0% {
       fill: rgba(72, 138, 20, 0);
-      stroke: rgba(254, 240, 138, 1);
+      stroke: rgb(255, 204, 0);
       stroke-dashoffset: 25%;
       stroke-dasharray: 0 50%;
       stroke-width: 2;
@@ -229,13 +230,42 @@ const { title, description } = Astro.props;
     }
     80% {
       fill: rgba(72, 138, 20, 0);
-      stroke: rgba(254, 240, 138, 1);
+      stroke: rgb(255, 204, 0);
       stroke-width: 3;
       opacity: 0.7;
     }
     100% {
       fill: rgba(72, 138, 20, 0);
       stroke: rgba(54, 95, 160, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+      opacity: 0.2;
+    }
+  }
+  @keyframes strokeLight {
+    0% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #000000;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+      opacity: . 1;
+    }
+    70% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #000000;
+      opacity: 0.4;
+    }
+    80% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #000000;
+      stroke-width: 3;
+      opacity: 0.7;
+    }
+    100% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: #000000;
       stroke-dashoffset: -25%;
       stroke-dasharray: 50% 0;
       stroke-width: 0;

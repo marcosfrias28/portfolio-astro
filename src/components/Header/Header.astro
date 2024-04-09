@@ -47,14 +47,5 @@ import MFLogo from "./MFLogo.astro";
     hamburgerButton.classList.toggle("is-active");
     hamburgerNavBar.classList.toggle("hidden");
     hamburgerNavBar.classList.toggle("flex");
-    const navItems = document.querySelectorAll(".navItem");
-    console.log(navItems);
-
-    navItems.map((item) => {
-      item.addEventListener("click", () => {
-        hamburgerButton.classList.toggle("is-active");
-        hamburgerNavBar.classList.toggle("hidden");
-      });
-    });
   }
 </script>

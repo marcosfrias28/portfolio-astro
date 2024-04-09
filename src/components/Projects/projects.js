@@ -1,14 +1,10 @@
-import astroLogo from "../../assets/astro.svg";
-import tailwindcssLogo from "../../assets/tailwindcss.svg";
-import html5Logo from "../../assets/html5.svg";
-import cssLogo from "../../assets/css.svg";
-import viteLogo from "../../assets/vite.svg";
-import jsLogo from "../../assets/javascript.svg";
-import reactLogo from "../../assets/react.svg";
-import coffeImage from "../../assets/coffeeListing.webp";
-import gitHubImage from "../../assets/githubProfile.webp";
-import meteoImage from "../../assets/MeteoCountry.webp";
-import brymarImage from "../../assets/brymarImmobiliaria.webp";
+import astroLogo from "/src/assets/astro.svg";
+import tailwindcssLogo from "/src/assets/tailwindcss.svg";
+import html5Logo from "/src/assets/html5.svg";
+import cssLogo from "/src/assets/css.svg";
+import viteLogo from "/src/assets/vite.svg";
+import jsLogo from "/src/assets/javascript.svg";
+import reactLogo from "/src/assets/react.svg";
 
 export const TECNOLOGIES = {
   react: {
@@ -41,7 +37,7 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: "",
-    projectImgUrl: coffeImage,
+    projectImgUrl: "/src/assets/coffeeListing.webp",
     title: "Coffee Listing",
     tecnologies: [react, css, javascript],
     description:
@@ -51,7 +47,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: gitHubImage,
+    projectImgUrl: "/src/assets/githubProfile.webp",
     title: "Github Profile",
     tecnologies: [html, css, javascript],
     description:
@@ -61,7 +57,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: meteoImage,
+    projectImgUrl: "/src/assets/MeteoCountry.webp",
     title: "Meteo Country",
     tecnologies: [react, css, vite, javascript],
     description:
@@ -71,7 +67,7 @@ export const PROGETTI = [
   },
   {
     id: "",
-    projectImgUrl: brymarImage,
+    projectImgUrl: "/src/assets/brymarImmobiliaria.webp",
     title: "BryMar Immobiliaria",
     tecnologies: [vite, react, tailwind, javascript],
     description:

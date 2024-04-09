@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Intro from "../components/Intro/Intro.astro";
-import Projects from "../components/Projects/Projects.astro";
+import gif404 from "../assets/404.gif";
 import SectionContainer from "../layouts/SectionContainer.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -13,6 +13,6 @@ import SectionContainer from "../layouts/SectionContainer.astro";
     className="flex justify-center items-center"
     title="Error 404"
   >
-    <img width="700px" src="/assets/404.gif" alt="" />
+    <Image loading="eager" src={gif404} alt="404 error Meme Dog this is fine" />
   </SectionContainer>
 </Layout>
