@@ -1,14 +1,14 @@
-import astroLogo from "/src/assets/svg/astro.svg";
-import tailwindcssLogo from "/src/assets/svg/tailwindcss.svg";
-import html5Logo from "/src/assets/svg/html5.svg";
-import cssLogo from "/src/assets/svg/css.svg";
-import viteLogo from "/src/assets/svg/vite.svg";
-import jsLogo from "/src/assets/svg/javascript.svg";
-import reactLogo from "/src/assets/svg/react.svg";
-import coffeImage from "/src/assets/coffeeListing.webp";
-import gitHubImage from "/src/assets/githubProfile.webp";
-import meteoImage from "/src/assets/MeteoCountry.webp";
-import brymarImage from "/src/assets/brymarImmobiliaria.webp";
+import astroLogo from "../../assets/astro.svg";
+import tailwindcssLogo from "../../assets/tailwindcss.svg";
+import html5Logo from "../../assets/html5.svg";
+import cssLogo from "../../assets/css.svg";
+import viteLogo from "../../assets/vite.svg";
+import jsLogo from "../../assets/javascript.svg";
+import reactLogo from "../../assets/react.svg";
+import coffeImage from "../../assets/coffeeListing.webp";
+import gitHubImage from "../../assets/githubProfile.webp";
+import meteoImage from "../../assets/MeteoCountry.webp";
+import brymarImage from "../../assets/brymarImmobiliaria.webp";
 
 export const TECNOLOGIES = {
   react: {
