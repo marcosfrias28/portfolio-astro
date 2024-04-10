@@ -6,10 +6,10 @@ import MFLogo from "./MFLogo.astro";
 
 <header
   {...Astro.props}
-  class="mx-auto bg-black/30 dark:bg-black/20 fixed top-0 z-50 w-full h-auto px-1 py-5 md:px-10 lg:pl-40"
+  class="mx-auto backdrop-blur-lg bg-black/30 dark:bg-black/20 fixed top-0 z-50 w-full h-auto px-1 py-[10px] md:px-10 lg:pl-40"
 >
   <div
-    class="flex flex-row items-center justify-between max-w-[1200px] mx-auto"
+    class="flex flex-row items-center justify-between gap-3 md:gap-0 max-w-[1200px] mx-auto"
   >
     <ChangeThemeButton />
 
@@ -27,16 +27,10 @@ import MFLogo from "./MFLogo.astro";
 
     <NavBar
       id="hamburgerNavBar"
-      class="hidden bg-black md:bg-transparent md:rounded-none md:flex flex-col md:flex-row absolute md:static z-50 w-full h-auto top-24 left-0 gap-10 py-2 md:top-0 items-center justify-between md:gap-2 md:w-auto lg:w-1/2 px-9 min-h-12"
+      class="hidden dark:bg-zinc-900/90 md:dark:bg-zinc-900 bg-[#919191e7] md:rounded-full md:bg-transparent rounded-none md:flex flex-col md:flex-row absolute md:static z-50 w-full h-auto top-20 left-0 gap-10 py-12 md:py-2 md:top-0 items-center justify-between md:gap-2 md:w-auto lg:w-1/2 px-9 min-h-12"
     />
   </div>
 </header>
-
-<style>
-  header {
-    backdrop-filter: blur(15px);
-  }
-</style>
 
 <script is:inline>
   const hamburgerButton = document.querySelector("#hamburgerButton");
