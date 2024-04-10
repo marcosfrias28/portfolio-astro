@@ -4,39 +4,37 @@ import ProjectCard from "./components/ProjectCard.astro";
 import { PROGETTI } from "./projects";
 ---
 
-<SectionContainer title="Progetti" id="progetti" className="">
-  <div class="flex flex-col flex-nowrap gap-20">
-    {
-      PROGETTI.map(
-        (
-          {
-            id,
-            projectImgUrl,
-            title,
-            tecnologies,
-            description,
-            codeUrl,
-            previewUrl,
-          },
-          i
-        ) => {
-          const order = i % 2 === 0 ? 1 : 0;
-          return (
-            <ProjectCard
-              id={id}
-              imgOrder={order}
-              tecnologies={tecnologies}
-              projectImgUrl={projectImgUrl}
-              title={title}
-              description={description}
-              codeUrl={codeUrl}
-              previewUrl={previewUrl}
-            />
-          );
-        }
-      )
-    }
-  </div>
+<SectionContainer title="Progetti" id="progetti" className="gap-20">
+  {
+    PROGETTI.map(
+      (
+        {
+          id,
+          projectImgUrl,
+          title,
+          tecnologies,
+          description,
+          codeUrl,
+          previewUrl,
+        },
+        i
+      ) => {
+        const order = i % 2 === 0 ? 1 : 0;
+        return (
+          <ProjectCard
+            id={id}
+            imgOrder={order}
+            tecnologies={tecnologies}
+            projectImgUrl={projectImgUrl}
+            title={title}
+            description={description}
+            codeUrl={codeUrl}
+            previewUrl={previewUrl}
+          />
+        );
+      }
+    )
+  }
 </SectionContainer>
 
 <script is:inline>

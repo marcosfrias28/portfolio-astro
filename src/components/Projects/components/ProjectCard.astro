@@ -20,6 +20,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp,svg}"
 );
 
+const imgClass = `relative aspect-video bg-black/20 rounded-3xl overflow-hidden`;
+
 if (!images[projectImgUrl])
   throw new Error(
     `"${projectImgUrl}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`
@@ -28,11 +30,9 @@ if (!images[projectImgUrl])
 
 <article
   id={id}
-  class={`flex flex-col lg:flex-row gap-10 my-14 mx-auto transition duration-300 hover:scale-105`}
+  class={`flex flex-col lg:flex-row gap-10 mx-auto transition duration-300 hover:scale-105`}
 >
-  <div
-    class={`relative aspect-video bg-black/20 rounded-3xl overflow-hidden order-[${imgOrder}] max-lg:order-none`}
-  >
+  <div class={imgClass}>
     <Image
       loading="eager"
       width={projectImgUrl.width}
@@ -55,11 +55,9 @@ if (!images[projectImgUrl])
       }
     </div>
   </div>
-  <div class="flex flex-col gap-5 lg:w-full">
-    <h3 class="text-2xl">
-      <span class="radient-animation font-italianno text-5xl">
-        {title}
-      </span>
+  <div class="flex flex-col gap-5 lg:w-full rounded-3xl p-5">
+    <h3 class="text-6xl radient-animation font-italianno">
+      {title}
     </h3>
 
     <p class="text-xl text-balance w-full opacity-70">{description}</p>
