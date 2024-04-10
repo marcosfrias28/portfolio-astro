@@ -37,27 +37,4 @@ import { PROGETTI } from "./projects";
   }
 </SectionContainer>
 
-<script is:inline>
-  // Funzione per avviare l'animazione quando l'elemento è visibile
-  function startAnimation(entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target); // Rimuove l'observer dopo l'animazione
-      }
-    });
-  }
-
-  // Creazione dell'Intersection Observer
-  const observer = new IntersectionObserver(startAnimation, {
-    threshold: 0.7, // Quando almeno il 70% dell'elemento è visibile
-  });
-
-  // Elemento da osservare
-  const svg = document.querySelector("svg");
-  const title = document.querySelector("h1");
-  observer.observe(svg);
-  observer.observe(title);
-</script>
-
 <style></style>
