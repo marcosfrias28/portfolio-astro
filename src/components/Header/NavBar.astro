@@ -20,6 +20,8 @@ import NavItem from "./NavItem.astro";
       $navItems.forEach((item) => item.classList.remove("active"));
       $navItem.classList.add("active");
       const $hamburgerNavBar = document.querySelector("#hamburgerNavBar");
+      const $hamburgerButton = document.querySelector("#hamburgerButton");
+      $hamburgerButton.classList.toggle("is-active");
       $hamburgerNavBar.classList.toggle("hidden");
       $hamburgerNavBar.classList.toggle("flex");
     });
