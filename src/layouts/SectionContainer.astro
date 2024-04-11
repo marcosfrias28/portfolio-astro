@@ -1,5 +1,5 @@
 ---
-const { id, title } = Astro.props;
+const { id, title, svg } = Astro.props;
 ---
 
 <section
@@ -12,19 +12,21 @@ const { id, title } = Astro.props;
         <h1 class="font-italianno radient-animation text-[100px] sm:text-[150px] transition-opacity">
           {title}
         </h1>
-        <svg
-          class="-z-10 absolute opacity-60 md:opacity-20 max-w-2xl"
-          viewBox="0 0 1280 720"
-        >
-          <text
-            x="50%"
-            y="50%"
-            text-anchor="middle"
-            class="font-italianno text-[480px] stroke-2 stroke-[rgba(254, 240, 138, 1)] dark:stroke-[rgba(254, 240, 138, 1)] animate-[strokeLight_5s_infinite] dark:animate-[strokeDark_5s_infinite]"
+        {svg === undefined && (
+          <svg
+            class="-z-10 absolute opacity-60 md:opacity-20 max-w-2xl"
+            viewBox="0 0 1280 720"
           >
-            {title}
-          </text>
-        </svg>
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              class="font-italianno text-[480px] stroke-2 stroke-[rgba(254, 240, 138, 1)] dark:stroke-[rgba(254, 240, 138, 1)] animate-[strokeLight_5s_infinite] dark:animate-[strokeDark_5s_infinite]"
+            >
+              {title}
+            </text>
+          </svg>
+        )}
       </div>
     )
   }
