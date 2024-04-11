@@ -6,16 +6,15 @@ import { Picture } from "astro:assets";
 
 <SectionContainer id="chi-sono" class="sm:mt-10" title="Conoscimi meglio">
   <section
-    class="after:table max-w-[1200px] after:content-none after:clear-both w-full"
+    class="flex flex-col md:block after:table max-w-[1200px] after:content-none after:clear-both w-full"
   >
     <Picture
       loading="eager"
-      class="circle mr-20 rounded-full float-start md:float-left shadow-lg size-72 border-[3px] border-black dark:border-white mx-auto"
+      class="circle mr-20 rounded-full self-center md:float-left shadow-lg size-72 border-[3px] border-black dark:border-white mx-auto"
       src={avatar}
       alt="Marcos Frias Molina Avatar"
     />
 
-    <br />
     <p class="text-xl text-pretty w-full opacity-70">
       A 14 anni ho iniziato ad esplorare il mondo della programmazione
       utilizzando Notepad++ su Windows XP, modificando il codice di terzi per
@@ -24,7 +23,6 @@ import { Picture } from "astro:assets";
       diventare un programmatore e realizzare progetti più complessi e
       ambiziosi.
     </p>
-    <br />
 
     <p class="text-xl text-balance w-full opacity-70">
       Sono motivato a crescere professionalmente e a contribuire con dedizione e
@@ -34,8 +32,7 @@ import { Picture } from "astro:assets";
       lo sviluppo front-end e la mia determinazione possano portare un valore
       aggiunto.
     </p>
-    <br />
-  </section>
+   </section>
 </SectionContainer>
 <style>
   .circle {
