@@ -1,0 +1,43 @@
+---
+import SectionContainer from "../../layouts/SectionContainer.astro";
+import avatar from "/src/assets/avatar.webp";
+import { Picture } from "astro:assets";
+---
+
+<SectionContainer id="chi-sono" class="mt-68" title="Conoscimi meglio">
+  <section
+    class="after:table max-w-[1200px] after:content-none after:clear-both w-full"
+  >
+    <Picture
+      loading="eager"
+      class="circle mr-20 rounded-full float-start md:float-left shadow-lg size-72 border-[3px] border-black dark:border-white mx-auto"
+      src={avatar}
+      alt="Marcos Frias Molina Avatar"
+    />
+
+    <br />
+    <p class="text-xl text-wrap">
+      Mi chiamo Marcos Frias e sono un appassionato di sviluppo front-end con
+      una solida base di conoscenza acquisita tramite studi personali e pratica
+      autonoma nel corso degli ultimi sei mesi. Sto cercando con entusiasmo la
+      mia prima esperienza professionale nel settore, e sono particolarmente
+      interessato a unirmi al vostro team come sviluppatore front-end.
+    </p>
+    <br />
+
+    <p class="text-xl text-wrap">
+      Sono motivato a crescere professionalmente e a contribuire con dedizione e
+      impegno al successo dell'azienda. Sono un apprendista veloce, attento ai
+      dettagli e desideroso di mettere in pratica le mie competenze tecniche per
+      realizzare prodotti di alta qualità. Sono convinto che la mia passione per
+      lo sviluppo front-end e la mia determinazione possano portare valore
+      aggiunto al vostro team.
+    </p>
+    <br />
+  </section>
+</SectionContainer>
+<style>
+  .circle {
+    shape-outside: circle();
+  }
+</style>

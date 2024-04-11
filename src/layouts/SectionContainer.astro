@@ -1,12 +1,32 @@
 ---
-import SectionTitle from "../components/SectionTitle.astro";
-const { id, title, className } = Astro.props;
+const { id, title } = Astro.props;
 ---
 
 <section
   id={id}
-  class={`${className} mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start p-5 mb-28 mt-30 md:mt-48`}
+  class={`${Astro.props.class} mt-32 mb-48 sm:mt-64 lg:mb-96 w-auto  mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start`}
 >
-  <SectionTitle title={title} />
+  {
+    title && (
+      <div class="relative flex items-center justify-center w-full">
+        <h1 class="font-italianno radient-animation text-[100px] sm:text-[150px] mb-16 transition-opacity">
+          {title}
+        </h1>
+        <svg
+          class="-z-10 absolute opacity-60 md:opacity-20 max-w-2xl"
+          viewBox="0 0 1280 720"
+        >
+          <text
+            x="50%"
+            y="50%"
+            text-anchor="middle"
+            class="font-italianno text-[480px] stroke-2 stroke-[rgba(254, 240, 138, 1)] dark:stroke-[rgba(254, 240, 138, 1)] animate-[strokeLight_5s_infinite] dark:animate-[strokeDark_5s_infinite]"
+          >
+            {title}
+          </text>
+        </svg>
+      </div>
+    )
+  }
   <slot />
 </section>

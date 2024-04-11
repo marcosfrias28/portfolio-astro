@@ -1,4 +1,4 @@
-<script is:inline>
+<!-- <script>
   function showModal() {
     const popover = document.querySelector("#popover");
     if (popover.classList.contains("invisible")) {
@@ -13,13 +13,11 @@
       popover.classList.replace("opacity-1", "opacity-0");
     }
   }
-</script>
+</script> -->
 <a
   href="https://linkedin.com/in/MarcosFriasMolina"
   target="_blank"
   rel="noopener"
-  onmouseover="showModal()"
-  onmouseleave="hideModal()"
   class="relative flex items-center transition md:justify-center md:hover:scale-105"
 >
   <div class="flex items-center -z-10">
@@ -28,16 +26,16 @@
         class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#fff567_0%,#fff567_0_50%,lightyellow_100%)]"
       ></span>
       <div
-        class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-black dark:text-white backdrop-blur-3xl whitespace-nowrap"
+        class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-white bg-zinc-900 rounded-full cursor-pointer backdrop-blur-3xl whitespace-nowrap"
       >
         {Astro.props.text}
       </div>
     </span>
   </div>
-  <div
+  <!-- <div
     id="popover"
     class="absolute left-0 bottom-12 invisible z-30 inline-block w-auto text-sm transition-opacity duration-300 border rounded-lg shadow-sm opacity-0 bg-black/50 text-white"
   >
     <p class="px-3 py-2">Aprire profilo LinkedIn</p>
-  </div>
+  </div> -->
 </a>
