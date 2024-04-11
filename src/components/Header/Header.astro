@@ -9,7 +9,7 @@ import MFLogo from "./MFLogo.astro";
   class="mx-auto backdrop-blur-lg bg-black/30 dark:bg-black/20 fixed top-0 z-50 w-full h-auto px-1 py-[10px] md:px-10 lg:pl-40"
 >
   <div
-    class="flex flex-row items-center justify-between gap-3 md:gap-0 max-w-[1200px] mx-auto"
+    class="flex flex-row items-center justify-between gap-3 lg:gap-0 max-w-[1200px] mx-auto"
   >
     <ChangeThemeButton />
 
@@ -17,11 +17,11 @@ import MFLogo from "./MFLogo.astro";
 
     <button
       id="hamburgerButton"
-      class="visible md:invisible order-4 hamburger hamburger--vortex-r bg-black/50 dark:bg-transparent"
+      class="inline-block md:hidden order-4 hamburger hamburger--vortex-r bg-black/50 dark:bg-transparent"
       type="button"
     >
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
+      <span class="block hamburger-box">
+        <span class="block hamburger-inner"></span>
       </span>
     </button>
 

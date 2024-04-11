@@ -4,18 +4,22 @@ import avatar from "/src/assets/avatar.webp";
 import { Picture } from "astro:assets";
 ---
 
-<SectionContainer id="chi-sono" class="sm:mt-10" title="Conoscimi meglio">
+<SectionContainer
+  id="chi-sono"
+  class="my-48 md:mt-32 lg:mb-32 px-5"
+  title="Conoscimi meglio"
+>
   <section
-    class="flex flex-col md:block after:table max-w-[1200px] after:content-none after:clear-both w-full"
+    class="flex flex-col md:block after:table max-w-[1200px] after:content-none after:clear-both w-full text-center md:text-left"
   >
     <Picture
       loading="eager"
-      class="circle mr-20 rounded-full self-center md:float-left shadow-lg size-72 border-[3px] border-black dark:border-white mx-auto"
+      class="circle rounded-full self-center md:float-left shadow-lg size-72 border-[3px] border-black dark:border-white mx-auto my-10 md:my-0 md:mr-20"
       src={avatar}
       alt="Marcos Frias Molina Avatar"
     />
 
-    <p class="text-xl text-pretty w-full opacity-70">
+    <p class="text-xl text-pretty w-full opacity-70 mb-5">
       A 14 anni ho iniziato ad esplorare il mondo della programmazione
       utilizzando Notepad++ su Windows XP, modificando il codice di terzi per
       personalizzare il design dei siti web. Nonostante ciò, solo oggi, quasi 10
@@ -32,7 +36,7 @@ import { Picture } from "astro:assets";
       lo sviluppo front-end e la mia determinazione possano portare un valore
       aggiunto.
     </p>
-   </section>
+  </section>
 </SectionContainer>
 <style>
   .circle {

@@ -1,33 +1,34 @@
 <div
-  class="order-0 md:order-1 inline-flex items-center gap-1 md:gap-4 w-32 md:w-40 bg-[#919191] dark:bg-zinc-900 rounded-full"
+  class="order-0 md:order-1 inline-flex items-center gap-1 md:gap-4 w-24 md:w-40 bg-[#919191] dark:bg-zinc-900 rounded-full"
 >
   <label for="peer" class="relative cursor-pointer" {...Astro.props}>
     <input id="peer" class="sr-only peer" value="" type="checkbox" />
     <nav
       id="themeButton"
-      class="w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden after:flex after:items-center after:justify-center before:flex before:items-center before:justify-center after:content-['🌝'] after:absolute after:h-10 after:w-10 after:top-1/2 after:bg-white/90 after:rounded-full after:left-1 after:-translate-y-1/2 after:transition-all after:duration-700 peer-checked:after:opacity-0 peer-checked:after:rotate-90 peer-checked:after:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:bg-[#383838] before:content-['🌚'] before:absolute before:bg-[#1d1d1d] before:rounded-full before:top-[4px] before:right-1 before:translate-y-full before:w-10 before:h-10 before:opacity-0 before:transition-all before:duration-700 peer-checked:before:opacity-100 peer-checked:before:rotate-180 peer-checked:before:translate-y-0"
+      class="w-12 md:w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden after:flex after:items-center after:justify-center before:flex before:items-center before:justify-center after:content-['🌝'] after:absolute after:h-10 after:w-10 after:top-1/2 after:bg-white/90 after:rounded-full after:left-1 after:-translate-y-1/2 after:transition-all after:duration-700 peer-checked:after:opacity-0 peer-checked:after:rotate-90 peer-checked:after:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:bg-[#383838] before:content-['🌚'] before:absolute before:bg-[#1d1d1d] before:rounded-full before:top-[4px] before:right-1 before:translate-y-full before:w-10 before:h-10 before:opacity-0 before:transition-all before:duration-700 peer-checked:before:opacity-100 peer-checked:before:rotate-180 peer-checked:before:translate-y-0"
     >
     </nav>
   </label>
 
-  <svg
-    id="system"
-    class="cursor-pointer"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"
-    ></path><path d="M7 20h10"></path><path d="M9 16v4"></path><path
-      d="M15 16v4"></path></svg
-  >
+  <div class="ml-1 md:m-0">
+    <svg
+      id="system"
+      class="cursor-pointer"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"
+      ></path><path d="M7 20h10"></path><path d="M9 16v4"></path><path
+        d="M15 16v4"></path></svg
+    >
+  </div>
 </div>
 
 <script is:inline>
