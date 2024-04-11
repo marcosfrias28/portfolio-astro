@@ -3,10 +3,14 @@ import NavItem from "./NavItem.astro";
 ---
 
 <nav {...Astro.props}>
-  <NavItem checked href="/#header" id="nav1" content="Inizio" />
-  <NavItem href="/#progetti" id="nav2" content="Progetti" />
-  <NavItem href="/#chi-sono" id="nav3" content="Chi sono" />
-  <NavItem href="/contact/" id="nav4" content="Contatto" />
+  <NavItem checked href="/#header" content="Inizio" />
+  <NavItem href="/#progetti" content="Progetti" />
+  <NavItem href="/#chi-sono" content="Chi sono" />
+  <NavItem
+    target="_blank"
+    href="https://linkedin.com/in/MarcosFriasMolina"
+    content="Contatto"
+  />
 </nav>
 
 <script>
