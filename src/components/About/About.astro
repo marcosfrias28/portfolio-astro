@@ -1,12 +1,12 @@
 ---
-import SectionContainer from "../../layouts/SectionContainer.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
 import avatar from "/src/assets/avatar.webp";
 import { Picture } from "astro:assets";
 ---
 
-<SectionContainer
+<SectionLayout
   id="chi-sono"
-  class="my-48 md:mt-32 lg:mb-32 px-5"
+  class="my-48 md:mt-32 lg:mb-64 px-5"
   title="Conoscimi meglio"
   svg
 >
@@ -38,7 +38,7 @@ import { Picture } from "astro:assets";
       aggiunto.
     </p>
   </section>
-</SectionContainer>
+</SectionLayout>
 <style>
   .circle {
     shape-outside: circle();

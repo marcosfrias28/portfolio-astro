@@ -1,10 +1,10 @@
 ---
-import SectionContainer from "../../layouts/SectionContainer.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
 import ProjectCard from "./components/ProjectCard.astro";
 import { PROGETTI } from "./projects";
 ---
 
-<SectionContainer title="Progetti" id="progetti" class="gap-20">
+<SectionLayout title="Progetti" id="progetti" class="gap-20">
   {
     PROGETTI.map(
       (
@@ -35,6 +35,6 @@ import { PROGETTI } from "./projects";
       }
     )
   }
-</SectionContainer>
+</SectionLayout>
 
 <style></style>
