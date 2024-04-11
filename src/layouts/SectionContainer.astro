@@ -4,7 +4,7 @@ const { id, title } = Astro.props;
 
 <section
   id={id}
-  class={`${Astro.props.class} mt-32 mb-48 sm:mt-64 lg:mb-96 w-auto  mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start`}
+  class={` mt-32 mb-48 sm:mt-64 lg:mb-96 w-auto  mx-auto max-w-[1200px] flex flex-col flex-nowrap items-start ${Astro.props.class}`}
 >
   {
     title && (
