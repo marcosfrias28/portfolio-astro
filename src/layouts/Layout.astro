@@ -64,7 +64,25 @@ const { title, description } = Astro.props;
     padding: 0;
     scroll-behavior: smooth;
   }
-  .radientlight {
+
+  .radient-animation {
+    display: inline;
+    font-style: normal;
+    background: linear-gradient(
+      89.81deg,
+      #fcd785 -1.72%,
+      #8f6e28 54.05%,
+      #ffae00 99.78%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+  }
+
+  html.dark .radient-animation {
     display: inline;
     font-style: normal;
     background: linear-gradient(
@@ -79,22 +97,6 @@ const { title, description } = Astro.props;
     text-fill-color: transparent;
     background-size: 200% 200%;
     animation: gradient 4s ease infinite;
-  }
-  .radientdark {
-    display: inline;
-    font-style: normal;
-    background: linear-gradient(
-      89.81deg,
-      #f8ec00 -1.72%,
-      rgb(95, 68, 0) 54.05%,
-      #f8ec00 99.78%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
   }
 
   @keyframes gradient {
