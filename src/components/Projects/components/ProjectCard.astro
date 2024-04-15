@@ -31,17 +31,19 @@ if (!images[projectImgUrl])
   id={id}
   class={`flex flex-col lg:flex-row gap-10 mx-auto transition duration-300 hover:scale-105`}
 >
-  <div class={`relative aspect-video bg-black/20 rounded-3xl overflow-hidden`}>
+  <div class="relative flex aspect-video">
     <Image
       loading="eager"
+      width={projectImgUrl.width}
+      height={projectImgUrl.height}
       format={projectImgUrl.format}
-      class="md:scale-110 aspect-video"
+      class="md:scale-105 relative aspect-video rounded-3xl"
       src={images[projectImgUrl]()}
       alt={`${title} screenshot`}
     />
     <div
       id="skillsLabels"
-      class="flex flex-row flex-wrap gap-3 absolute bottom-3 left-3"
+      class="flex flex-row flex-wrap gap-3 absolute top-3 left-3"
     >
       {
         tecnologies.map(
@@ -52,12 +54,13 @@ if (!images[projectImgUrl])
       }
     </div>
   </div>
-  <div class="flex flex-col gap-5 lg:w-full rounded-3xl p-5">
+
+  <div class="flex flex-col gap-5 lg:w-full rounded-3xl px-5">
     <h3 class="text-5xl font-italianno">
       {title}
     </h3>
 
-    <p class="text-xl text-balance w-full opacity-70">{description}</p>
+    <p class="text-lg text-balance w-full opacity-70">{description}</p>
     <div id="linkButtons" class="flex flex-row flex-nowrap gap-3">
       {
         codeUrl ? (
