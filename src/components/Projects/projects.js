@@ -37,13 +37,13 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: crypto.randomUUID(),
-    projectImgUrl: "/src/assets/translateappi.webp",
-    title: "TranslateAPPI",
-    tecnologies: [react, tailwind, javascript, vite],
+    projectImgUrl: "/src/assets/brymarImmobiliaria.webp",
+    title: "BryMar Immobiliaria",
+    tecnologies: [vite, react, tailwind, javascript],
     description:
-      "TranslateAPPI sviluppata con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per dare traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
-    codeUrl: "https://github.com/marcosfrias28/Translate-app",
-    previewUrl: "https://translate-appi.vercel.app/",
+      "Richiesta per un sito immobiliare all'avanguardia. Sfrutta useContext per gestire stati globali, consentendo una facile modifica della lingua tra Spagnolo e Inglese attraverso un oggetto contenente tutti i testi. La live preview offre una visione del 35% del progetto completo, evidenziando le sue funzionalità principali.",
+    codeUrl: "",
+    previewUrl: "https://brymar-immobiliaria.vercel.app/",
   },
   {
     id: crypto.randomUUID(),
@@ -55,7 +55,16 @@ export const PROGETTI = [
     codeUrl: "https://github.com/marcosfrias28/simple-coffe-listing",
     previewUrl: "https://simple-coffe-listing-five.vercel.app/",
   },
-
+  {
+    id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/githubProfile.webp",
+    title: "Github Profile",
+    tecnologies: [html, css, javascript],
+    description:
+      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
+    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
+    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
+  },
   {
     id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/MeteoCountry.webp",
@@ -68,22 +77,12 @@ export const PROGETTI = [
   },
   {
     id: crypto.randomUUID(),
-    projectImgUrl: "/src/assets/brymarImmobiliaria.webp",
-    title: "BryMar Immobiliaria",
-    tecnologies: [vite, react, tailwind, javascript],
+    projectImgUrl: "/src/assets/translateappi.webp",
+    title: "Translate APPi",
+    tecnologies: [react, tailwind, javascript, vite],
     description:
-      "Richiesta per un sito immobiliare all'avanguardia. Sfrutta useContext per gestire stati globali, consentendo una facile modifica della lingua tra Spagnolo e Inglese attraverso un oggetto contenente tutti i testi. La live preview offre una visione del 35% del progetto completo, evidenziando le sue funzionalità principali.",
-    codeUrl: "",
-    previewUrl: "https://brymar-immobiliaria.vercel.app/",
-  },
-  {
-    id: crypto.randomUUID(),
-    projectImgUrl: "/src/assets/githubProfile.webp",
-    title: "Github Profile",
-    tecnologies: [html, css, javascript],
-    description:
-      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
-    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
-    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
+      "TranslateAPPI sviluppata con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per dare traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
+    codeUrl: "https://github.com/marcosfrias28/Translate-app",
+    previewUrl: "https://translate-appi.vercel.app/",
   },
 ];

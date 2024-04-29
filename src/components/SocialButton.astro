@@ -11,7 +11,13 @@ const { text, href, svg } = Astro.props;
   class="hover:scale-105 w-fit h-10 text-white text-center transition cursor-pointer flex gap-3 rounded-full px-5 py-1 justify-center items-center bg-black dark:bg-black/50 border-[0.3px] border-[#f7f7f7] text-nowrap"
   >{
     svg ? (
-      <Image loading="lazy" width={25} src={svg} alt={text} {...Astro.props} />
+      <Image
+        loading="lazy"
+        width={25}
+        src={svg}
+        alt={text + " Company Logo, all rights reserved to them"}
+        {...Astro.props}
+      />
     ) : (
       ""
     )

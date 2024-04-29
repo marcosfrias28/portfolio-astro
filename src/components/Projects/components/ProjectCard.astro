@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
-import Button from "../../SocialButton.astro";
+import BadgeButton from "../../SocialButton.astro";
 import github from "/src/assets/github.svg";
 import vercel from "/src/assets/vercel_dark.svg";
 import TechTag from "./TechTag.astro";
@@ -63,12 +63,12 @@ if (!images[projectImgUrl])
     <div id="linkButtons" class="flex flex-row flex-nowrap gap-3">
       {
         codeUrl ? (
-          <Button text="Codice sorgente" svg={github} href={codeUrl} />
+          <BadgeButton text="Codice sorgente" svg={github} href={codeUrl} />
         ) : (
           ""
         )
       }
-      <Button text="Live Preview" svg={vercel} href={previewUrl} />
+      <BadgeButton text="Live Preview" svg={vercel} href={previewUrl} />
     </div>
   </div>
 </article>
