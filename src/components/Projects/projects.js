@@ -41,7 +41,7 @@ export const PROGETTI = [
     title: "TranslateAPPI",
     tecnologies: [react, tailwind, javascript, vite],
     description:
-      "L'App Translate è un'app web con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
+      "TranslateAPPI sviluppata con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per dare traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
     codeUrl: "https://github.com/marcosfrias28/Translate-app",
     previewUrl: "https://translate-appi.vercel.app/",
   },
