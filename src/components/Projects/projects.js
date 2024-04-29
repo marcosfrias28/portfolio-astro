@@ -36,7 +36,17 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 
 export const PROGETTI = [
   {
-    id: "",
+    id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/translateappi.webp",
+    title: "TranslateAPPI",
+    tecnologies: [react, tailwind, javascript, vite],
+    description:
+      "L'App Translate è un'applicazione web sviluppata con JavaScript, Vite e ReactJS, stili realizzati con tailwindcss e gestione delle richieste API tramite axios. Fa uso delle funzionalità avanzate di React come useContext, useReducer, useState e useEffect per un controllo avanzato dello stato e delle interazioni utente. L'integrazione della chiave API di Google Translation è limitata esclusivamente all'URL dell'applicazione, garantendo sicurezza e precisione nelle traduzioni, il tutto offrendo un'esperienza utente fluida e un design accattivante.",
+    codeUrl: "https://github.com/marcosfrias28/Translate-app",
+    previewUrl: "https://translate-appi.vercel.app/",
+  },
+  {
+    id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/coffeeListing.webp",
     title: "Coffee Listing",
     tecnologies: [react, css, javascript],
@@ -45,18 +55,9 @@ export const PROGETTI = [
     codeUrl: "https://github.com/marcosfrias28/simple-coffe-listing",
     previewUrl: "https://simple-coffe-listing-five.vercel.app/",
   },
+
   {
-    id: "",
-    projectImgUrl: "/src/assets/githubProfile.webp",
-    title: "Github Profile",
-    tecnologies: [html, css, javascript],
-    description:
-      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
-    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
-    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
-  },
-  {
-    id: "",
+    id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/MeteoCountry.webp",
     title: "Meteo Country",
     tecnologies: [react, css, vite, javascript],
@@ -66,7 +67,7 @@ export const PROGETTI = [
     previewUrl: "https://meteo-country-vite-react-css.vercel.app/",
   },
   {
-    id: "",
+    id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/brymarImmobiliaria.webp",
     title: "BryMar Immobiliaria",
     tecnologies: [vite, react, tailwind, javascript],
@@ -74,5 +75,15 @@ export const PROGETTI = [
       "Richiesta per un sito immobiliare all'avanguardia. Sfrutta useContext per gestire stati globali, consentendo una facile modifica della lingua tra Spagnolo e Inglese attraverso un oggetto contenente tutti i testi. La live preview offre una visione del 35% del progetto completo, evidenziando le sue funzionalità principali.",
     codeUrl: "",
     previewUrl: "https://brymar-immobiliaria.vercel.app/",
+  },
+  {
+    id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/githubProfile.webp",
+    title: "Github Profile",
+    tecnologies: [html, css, javascript],
+    description:
+      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
+    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
+    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
   },
 ];
