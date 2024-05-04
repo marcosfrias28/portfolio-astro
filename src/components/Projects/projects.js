@@ -57,13 +57,23 @@ export const PROGETTI = [
   },
   {
     id: crypto.randomUUID(),
-    projectImgUrl: "/src/assets/githubProfile.webp",
-    title: "Github Profile",
-    tecnologies: [html, css, javascript],
+    projectImgUrl: "/src/assets/translateappi.webp",
+    title: "Translate APPi",
+    tecnologies: [react, tailwind, javascript, vite],
     description:
-      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
-    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
-    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
+      "TranslateAPPI sviluppata con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per dare traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
+    codeUrl: "https://github.com/marcosfrias28/Translate-app",
+    previewUrl: "https://translate-appi.vercel.app/",
+  },
+  {
+    id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/LandingAstro.webp",
+    title: "Landing Page",
+    tecnologies: [astro, tailwind, html],
+    description:
+      "Landing page responsive creata con Astro e TailwindCSS per un design ottimizzato su tutti i dispositivi. Esperienza utente fluida e prestazioni rapide su desktop e mobile.",
+    codeUrl: "https://github.com/marcosfrias28/landing-page-astro",
+    previewUrl: "https://landing-page-astro-green.vercel.app/",
   },
   {
     id: crypto.randomUUID(),
@@ -77,12 +87,12 @@ export const PROGETTI = [
   },
   {
     id: crypto.randomUUID(),
-    projectImgUrl: "/src/assets/translateappi.webp",
-    title: "Translate APPi",
-    tecnologies: [react, tailwind, javascript, vite],
+    projectImgUrl: "/src/assets/githubProfile.webp",
+    title: "Github Profile",
+    tecnologies: [html, css, javascript],
     description:
-      "TranslateAPPI sviluppata con JavaScript, Vite e ReactJS, stili tailwindcss e API Google Translation per dare traduzioni precise, garantendo un'esperienza utente fluida e moderna. Sfrutta inoltre le funzionalità avanzate di React come useContext, useReducer, useState e useEffect per una gestione avanzata dello stato e delle interazioni utente.",
-    codeUrl: "https://github.com/marcosfrias28/Translate-app",
-    previewUrl: "https://translate-appi.vercel.app/",
+      "L'applicazione utilizza HTML, CSS e JavaScript per consentire la ricerca dei profili su GitHub. Una volta inserito il nome utente, vengono mostrate in modo chiaro e conciso le informazioni più rilevanti del profilo, come il numero di repository, i follower, le organizzazioni seguite e una breve descrizione bio. Un design intuitivo e responsivo rende l'esperienza utente piacevole su qualsiasi dispositivo.",
+    codeUrl: "https://github.com/marcosfrias28/GitHub-Profile-App",
+    previewUrl: "https://git-hub-profile-app-azure.vercel.app/",
   },
 ];
