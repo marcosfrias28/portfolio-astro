@@ -37,6 +37,16 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/shortlynker.webp",
+    title: "Shortlynker",
+    tecnologies: [react, tailwind, astro],
+    description:
+      "Shortlynker è un'app web intuitiva che permette di accorciare URL in modo veloce e pratico, ideale per facilitare la condivisione online. Questo progetto mette in luce le mie competenze nel creare soluzioni efficienti per migliorare l'esperienza degli utenti sul web.",
+    codeUrl: "https://github.com/marcosfrias28/url-shortening-api",
+    previewUrl: "https://shortlynker.vercel.app/",
+  },
+  {
+    id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/brymarImmobiliaria.webp",
     title: "BryMar Immobiliaria",
     tecnologies: [vite, react, tailwind, javascript],
