@@ -37,6 +37,16 @@ const { react, css, html, javascript, vite, tailwind, astro } = TECNOLOGIES;
 export const PROGETTI = [
   {
     id: crypto.randomUUID(),
+    projectImgUrl: "/src/assets/usnplashCollection.webp",
+    title: "UnsplashBox",
+    tecnologies: [react, tailwind, astro],
+    description:
+      "UnsplashBox è un'app web intuitiva che permette di cercare e scaricare qualsiasi genere di fotografie, scattate da persone di tutto il mondo. Gestione dello stato globale con Zustand, utilizzo di Astro e React per la generazione di pagine statiche e dinamiche, e stili con TailwindCSS per un design moderno e responsive.",
+    codeUrl: "https://github.com/marcosfrias28/unsplash-collection",
+    previewUrl: "https://unsplash-collection-sable.vercel.app/",
+  },
+  {
+    id: crypto.randomUUID(),
     projectImgUrl: "/src/assets/shortlynker.webp",
     title: "Shortlynker",
     tecnologies: [react, tailwind, astro],
